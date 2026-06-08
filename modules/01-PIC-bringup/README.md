@@ -80,10 +80,13 @@ La arquitectura final es la siguiente:
 **1. Circuito mínimo**
 Conectar el cristal de 20MHz entre OSC1 y OSC2 con capacitores de 22pF
 a tierra en cada pin. Resistencia de 10kΩ entre VDD y MCLR. Ver esquemático:
+
 ![Esquemático](./media/Esq.png)
 
 Referencia de pines ICD2/PICkit3:
+
 ![Pines PICkit3](./media/Pickit3.png)
+
 ![Conexión en circuito](./media/InCircuitProgrammer.png)
 
 **2. Cálculo de PR2**
@@ -99,23 +102,29 @@ $$\text{contador} = \frac{1s}{0.2ms} = 5000$$
 ### TMR0
 
 **Simulación — TMR0 (período con deriva)**
+
 ![Simulación TMR0](./media/Sim_TMR0.png)
 
 **Hardware físico — osciloscopio con TMR0**
+
 ![Osciloscopio TMR0](./media/FIS_TMR0.bmp)
 
 **Video — circuito funcionando con TMR0**
-<video controls src="./media/FIS_TMR0.mp4"></video>
+
+[![alt text](https://tinyurl.com/FIS-TMR0)](https://youtu.be/vNRK-vnqI9E)
 
 ### TMR2
 **Simulación — TMR2 (período correcto)**
+
 ![Simulación TMR2](./media/Sim_TMR2.png)
 
 **Hardware físico — osciloscopio con TMR2**
+
 ![alt text](./media/FIS_TMR2.bmp)
 
 **Video — circuito funcionando con TMR2**
-<video controls src="./media/FIS_TMR2.mp4"></video>
+
+[![alt text](https://tinyurl.com/FIS-TMR2)](https://youtu.be/XfljZHeM8n8)
 
 ## Lessons Learned
 - Los capacitores de carga del oscilador deben ser de 22pF. Valores mayores
@@ -127,9 +136,13 @@ $$\text{contador} = \frac{1s}{0.2ms} = 5000$$
   circuito en realidad está correcto.
 
   **Hardware físico — osciloscopio con OSC**
+  
   ![alt text](./media/OSC.bmp)
+  
   **Video — circuito funcionando con TMR2**
-    <video controls src="./media/FIS_OSC.mp4"></video>
+
+  [<img src="https://github.com/user-attachments/assets/99601354-f57e-4330-9612-fc3729d1cde2" />](https://youtube.com/shorts/wOxQCVknqyc)
+
 
 - La reescritura manual de TMR0 en ISR introduce deriva temporal acumulativa
   porque los ciclos consumidos antes de recargar el registro no se recuperan.
