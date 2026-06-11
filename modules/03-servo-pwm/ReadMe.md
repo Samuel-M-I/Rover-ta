@@ -94,6 +94,10 @@ $$b = \frac{T_{min}}{0.4\,\mu s} + 15536$$
 
 $$m = \frac{\frac{T_{max}}{0.4\,\mu s} + 15536 - b}{100}$$
 
+**Circuito mínimo**
+
+![alt text](./media/esq.png)
+
 ## Validation Evidence
 
 Ancho de pulso al 0 %:
